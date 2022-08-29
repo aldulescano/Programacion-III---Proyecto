@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import './home.css'
 
 class Home extends Component{
@@ -13,9 +11,7 @@ class Home extends Component{
     render(){
         return(
             <React.Fragment>
-                <Header />
-                    <h1>peliculas</h1>
-                <Footer />
+                <h1>peliculas</h1>
             </React.Fragment>
         )
     }
