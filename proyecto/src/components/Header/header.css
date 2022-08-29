@@ -1,0 +1,35 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color:  #c1b8d8;;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+    justify-content: space-between;
+    background-color:  #c1b8d8;
+}
+
+.main-nav a {
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: white;
+
+    /* style */
+    color: black;
+    text-decoration: none;
+
+}
