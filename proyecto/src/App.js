@@ -1,6 +1,6 @@
 function App() {
   return (
-    <h2>home</h2>
+    <h2>home2</h2>
   );
 }
 
