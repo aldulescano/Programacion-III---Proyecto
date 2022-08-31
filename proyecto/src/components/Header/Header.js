@@ -10,9 +10,12 @@ function Header(){
     return (
         <nav>
             <ul className="main-nav">
-                <Link to="/"><div className={path === '/' ? 'show' : 'normal'}>Home</div></Link>
+                {/* <Link to="/"><div className={path === '/' ? 'show' : 'normal'}>Home</div></Link>
                 <Link to="/peliculas"> <div  className={path === '/peliculas' ? 'show' : 'normal'}>Ver Todas</div></Link>
-                <Link to="/peliculas/favoritos"><div  className={path === '/peliculas/favoritos' ? 'show' : 'normal'}>Favoritos</div></Link>
+                <Link to="/peliculas/favoritos"><div  className={path === '/peliculas/favoritos' ? 'show' : 'normal'}>Favoritos</div></Link> */}
+                <Link to="/" id='homeNav'>Home</Link>
+                <Link to="/peliculas">Ver Todas</Link>
+                <Link to="/peliculas/favoritos">Favoritos</Link>
             </ul>
         </nav>
     )

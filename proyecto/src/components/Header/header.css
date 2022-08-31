@@ -4,7 +4,7 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color:  #c1b8d8;;
+    /* background-color:  #c1b8d8;; */
 }
 
 nav ul {
@@ -14,7 +14,11 @@ nav ul {
     align-items: center;
     margin: 5px;
     justify-content: space-between;
-    background-color:  #c1b8d8;
+    /* background-color:  #c1b8d8; */
+}
+
+#homeNav{
+    color: #7a4a84;
 }
 
 .main-nav a {
@@ -26,7 +30,7 @@ nav ul {
     font-weight: bold;
     padding: 8px;
     border-radius: 3px;
-    background-color: #c1b8d8;
+    /* background-color: #c1b8d8; */
 
     /* style */
     color: black;

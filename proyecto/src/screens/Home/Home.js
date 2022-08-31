@@ -11,7 +11,7 @@ class Home extends Component{
     render(){
         return(
             <React.Fragment>
-                <h1>peliculas</h1>
+                <h1>Películas en cartelera</h1>
             </React.Fragment>
         )
     }

@@ -8,6 +8,7 @@ import Resultados from './screens/Resultados/Resultados';
 import Error404 from './screens/Error/Error404';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import '../src/app.css'
 
 function App() {
   return (
