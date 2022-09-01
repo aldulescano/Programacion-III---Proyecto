@@ -1,0 +1,44 @@
+.movie-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 30px;
+    height: 400px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-box_data {
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie-box_data h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    font-family: var(--akshar-font-family);
+}
+
+.movie-box_data p {
+    font-size: 10px;
+    width: 100%;
+    transition: 300ms;
+    overflow: hidden;
+}
+
+.movie-box:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttonsCard button{
+    background-color: #7a4a84;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+}

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './home.css'
+import MovieCard from '../../components/MovieCard/MovieCard';
 
 class Home extends Component{
     constructor(){
@@ -12,6 +13,10 @@ class Home extends Component{
         return(
             <React.Fragment>
                 <h1>Películas en cartelera</h1>
+
+                <section>
+                    <MovieCard/>
+                </section>
             </React.Fragment>
         )
     }
