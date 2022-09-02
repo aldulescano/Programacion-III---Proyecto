@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './home.css'
-import MovieCard from '../../components/MovieCard/MovieCard';
+import MovieCard from '../components/MovieCard/MovieCard';
+import Header from '../components/Header/Header'
 
 class Home extends Component{
     constructor(){
@@ -12,11 +13,9 @@ class Home extends Component{
     render(){
         return(
             <React.Fragment>
-                <h1>Películas en cartelera</h1>
-
-                <section>
+                <h1>¡Conocé las películas en cartelera!</h1>
                     <MovieCard/>
-                </section>
+                    <MovieCardTopRated/>
             </React.Fragment>
         )
     }

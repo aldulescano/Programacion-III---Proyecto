@@ -13,7 +13,7 @@ import '../src/app.css'
 function App() {
   return (
     <React.Fragment>
-      <Header />
+      <Header/>
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
