@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './home.css'
 import MovieCard from '../components/MovieCard/MovieCard';
-import Header from '../components/Header/Header'
 
 class Home extends Component{
     constructor(){
