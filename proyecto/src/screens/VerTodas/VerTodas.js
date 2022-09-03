@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Movie from '../../components/Movie/Movie'
+import Form from '../../components/Form/Form'
 
 class VerTodas extends Component{
     constructor(props){
@@ -8,24 +10,14 @@ class VerTodas extends Component{
         }
     }
 
-    evitarDefault(evento){
-        evento.preventDefault();
-        
-    }
-
-    obtenerDatos(evento){
-        this.setState({
-          value: evento.target.value,  
-        }, () => console.log(this.state.value))
-    }
-
 
     render(){
         return(
-            <form onSubmit={(evento)=>this.evitarDefault(evento)} className='mb-4'>
-                <input onChange={(evento)=>this.obtenerDatos(evento)} type="text" name="usuario" value={this.state.value} />
-                <button type="submit">Enviar</button>
-            </form>
+            <React.Fragment>
+            
+            <Form/>
+            <Movie/>
+            </React.Fragment>
         )
     }
 }
