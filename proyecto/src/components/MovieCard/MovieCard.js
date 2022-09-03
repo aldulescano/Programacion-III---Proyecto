@@ -14,22 +14,28 @@ class MovieCard extends Component{
         return(
             <article className='movie-box'>
                     <figure className='figuraImagen'>
-                    <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}><img src={`https://image.tmdb.org/t/p/w342/${this.props.datosPeliculasPop.poster_path}`} alt="Cartel de película" />
+                    <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
+                        <img src={`https://image.tmdb.org/t/p/w342/${this.props.datosPeliculasPop.poster_path}`} alt="Cartel de película" />
                     </Link>
                     </figure>
+                    <h2 className='titulox'>{this.props.datosPeliculasPop.title}</h2> 
+                <div className='efectoOculto'>
                 <div>
-                <h2 className='titulox'>{this.props.datosPeliculasPop.title}</h2> 
-                <p className='overViewCard'>{this.props.datosPeliculasPop.overview}</p>                   
-                <p className='toDetail'>Ir a detalle</p>
+                <p className='overviewCard'>{this.props.datosPeliculasPop.overview}</p>                   
+                <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
+                </Link>
                 </div>
                 <div className='buttonsCard'>
                         <button>Ver más</button>
-                        <button>Agregar a Favoritos</button> 
+               <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
+               <button>Ir a detalle</button>
+                </Link>
+                <button>Agregar a Favoritos</button> 
+                </div>
                 </div>
                 </article>
     )
             
-
 
     }
 
