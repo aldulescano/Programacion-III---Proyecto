@@ -2,13 +2,13 @@
     display: flex;
 }
 
-h2{
+.paqueteError h2{
     color: black;
     font-size: 60px;
     margin-left: 60px;
 }
 
-p{
+.paqueteError p{
     margin-left: 60px;
 }
 

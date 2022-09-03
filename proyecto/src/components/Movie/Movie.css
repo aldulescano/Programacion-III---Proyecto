@@ -1,0 +1,11 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    border: red solid 30px;
+}
+
+.movieCard{
+    display: flex;
+    background-color: black;
+    color: white;
+}
