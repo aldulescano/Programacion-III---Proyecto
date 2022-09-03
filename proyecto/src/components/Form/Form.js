@@ -14,10 +14,11 @@ class Form extends Component{
         
     }
 
+
     obtenerDatos(evento){
         this.setState({
           value: evento.target.value,  
-        }, () => console.log(this.state.value))
+        },()=>this.props.filtrarPelis(this.state.value))
     }
 
 
@@ -25,7 +26,7 @@ class Form extends Component{
         return(
             <form onSubmit={(evento)=>this.evitarSubmit(evento)} className='mb-4'>
                 <input onChange={(evento)=>this.obtenerDatos(evento)} type="text" name="usuario" value={this.state.value} />
-                <button type="submit">Enviar</button>
+                <button type="submit">resetar</button>
             </form>)
 
         }
