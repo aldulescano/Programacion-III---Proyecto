@@ -18,31 +18,31 @@ class Movies extends Component{
     }
 
     componentDidMount(){
-        //Buscamos los datos de las peliculas mas populares
+    //Buscamos los datos de las peliculas mas populares
     fetch(urlpopularMovies)
             .then( res => res.json())
             .then( data => this.setState({
                 peliculasPopulares: data.results,
             }))
             .catch()
+    //Buscamos los datos de las peliculas Top
     fetch(urlTopRatedMovies)
             .then( res => res.json())
             .then( data => this.setState({
                 peliculasTopRated: data.results,
             }))
             .catch()
-        
         }
-
-      
     render(){
         return(
             <React.Fragment>
+                <h1>Peliculas Populares</h1>
                 <section className='cardContainer'>
                     { 
                         this.state.peliculasPopulares.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
                     }
                 </section>
+                <h1>Peliculas Top Rated</h1>
                 <section className='cardContainer'>
                     { 
                         this.state.peliculasTopRated.map( (unaPeli, idx) => <MovieCardTopRated key={unaPeli.name+idx} datosPeliculasTop={unaPeli}/>)
