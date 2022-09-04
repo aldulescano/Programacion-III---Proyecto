@@ -7,6 +7,7 @@ class MovieCard extends Component{
     constructor(props){
         super(props)
         this.state = {
+            favsLegend: 'Agregar a Favoritos'
         };
     };
 
@@ -23,11 +24,17 @@ class MovieCard extends Component{
 
         if(favoritos.includes(id)){
 
-           favoritos = favoritos.filter(elId =>elId !== id)
+           favoritos = favoritos.filter(elId =>elId !== id);
+           this.setState ({
+            favsLegend: 'Agregar a Favoritos'
+        })
         }
 
         else {
             favoritos.push(id);
+            this.setState ({
+                favsLegend: 'Quitar de Favoritos'
+            })
         }
         
 
@@ -58,7 +65,7 @@ class MovieCard extends Component{
                <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
                <button>Ir a detalle</button>
                 </Link>
-                <button onClick={()=> this.adminFavoritos(this.props.datosPeliculasPop.id)}>Agregar a Favoritos</button> 
+                <button onClick={()=> this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button> 
                 </div>
                 </div>
                 </article>
