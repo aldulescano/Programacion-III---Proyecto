@@ -33,7 +33,7 @@ class Movies extends Component{
             }))
             .catch()
         }
-        }
+    }
 
       
     render(){
@@ -54,6 +54,6 @@ class Movies extends Component{
         )
     }
 
-}
+};
 
 export default Movies;
