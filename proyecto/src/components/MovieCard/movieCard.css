@@ -1,3 +1,16 @@
+
+.mostrar{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    color: rgb(123, 0, 172);
+}
+
+.ocultar{
+    display: none;
+}
+
+
 .movie-box {
     background-color: #ffffff;
     border-radius: 5px;
@@ -46,6 +59,9 @@
 }
 div.buttonsCard{
     text-align: center;
+    flex: wrap;
+    margin: 10px 10px 10px 10px;
+    padding: 15px 15px;
 }
 
 
@@ -81,4 +97,6 @@ div.buttonsCard button{
 }
 
 
-
+.descripcionCard{
+    text-align: center;
+}
