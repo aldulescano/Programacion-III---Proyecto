@@ -21,7 +21,15 @@ class MovieCard extends Component{
 
         }
 
-        favoritos.push(id);
+        if(favoritos.includes(id)){
+
+           favoritos = favoritos.filter(elId =>elId !== id)
+        }
+
+        else {
+            favoritos.push(id);
+        }
+        
 
         let favoritosAString =  JSON.stringify(favoritos);
 
