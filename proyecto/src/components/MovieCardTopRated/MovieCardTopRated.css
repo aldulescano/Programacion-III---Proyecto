@@ -1,0 +1,81 @@
+.movie-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    border: gray;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    transition: 300ms;
+    overflow: hidden;
+}
+
+.movie-box_data {
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.titulox {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    font-family: var(--akshar-font-family);
+}
+
+.movie-box_data p {
+    font-size: 10px;
+    width: 100%;
+    margin: 0;
+    color: var(--gray);
+    text-align: center;
+    height: 0;
+    transition: 15ms;
+    overflow: hidden;
+}
+
+
+.movie-box:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+div.buttonsCard{
+    text-align: center;
+}
+
+
+div.buttonsCard button{
+    background-color: #7a4a84;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.toDetail{
+    color: red;
+    text-align: center;
+}
+
+.figuraImagen img{
+    width: 100%;
+    height: 250px;
+    width: 100%;
+    border: solid rgb(184, 184, 184) 3px;
+    border-radius: 10px;
+    margin: 0px 0px;
+}
+
+
+.overviewCard{
+    font-size:15px;
+    text-align: center;
+    margin:8px 8px;
+    display: block;
+}
