@@ -39,12 +39,16 @@ class Movies extends Component{
                 <h1>Peliculas Populares</h1>
                 <section className='cardContainer'>
                     { 
+                    this.state.peliculasPopulares.length === 0 ?
+                    <div class="gif"><img src="/img/cargando-loading.gif" class="tenor-gif-embed" alt="chica cargando"/><p>Cargando...</p>
+    </div> :
                         this.state.peliculasPopulares.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
                     }
                 </section>
                 <h1>Peliculas Top Rated</h1>
                 <section className='cardContainer'>
                     { 
+                   
                         this.state.peliculasTopRated.map( (unaPeli, idx) => <MovieCardTopRated key={unaPeli.name+idx} datosPeliculasTop={unaPeli}/>)
                     }
                 </section>

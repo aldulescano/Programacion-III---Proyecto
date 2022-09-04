@@ -10,6 +10,26 @@ class MovieCard extends Component{
         };
     };
 
+    adminFavoritos(id){
+
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+
+        if(recuperoStorage !== null){
+            let favoritosGuardados = JSON.parse(recuperoStorage);
+            favoritos = favoritosGuardados
+
+        }
+
+        favoritos.push(id);
+
+        let favoritosAString =  JSON.stringify(favoritos);
+
+        localStorage.setItem('favoritos', favoritosAString);
+
+        console.log(localStorage)
+    }
+
     render(){
         return(
             <article className='movie-box'>
@@ -30,7 +50,7 @@ class MovieCard extends Component{
                <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
                <button>Ir a detalle</button>
                 </Link>
-                <button>Agregar a Favoritos</button> 
+                <button onClick={()=> this.adminFavoritos(this.props.datosPeliculasPop.id)}>Agregar a Favoritos</button> 
                 </div>
                 </div>
                 </article>
