@@ -24,7 +24,7 @@ class MovieCard extends Component{
                 <p className='overviewCard'>{this.props.datosPeliculasPop.overview}</p>                   
                 <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
                 </Link>
-                </div>
+                </div>-*
                 <div className='buttonsCard'>
                         <button>Ver más</button>
                <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
