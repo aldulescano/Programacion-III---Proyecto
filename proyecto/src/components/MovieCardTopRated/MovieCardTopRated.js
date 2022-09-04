@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './movieCardTopRated.css'
+import './MovieCardTopRated.css'
 import {Link} from 'react-router-dom';
 
 

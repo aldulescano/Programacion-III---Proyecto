@@ -28,7 +28,7 @@ class Movies extends Component{
     fetch(urlTopRatedMovies)
             .then( res => res.json())
             .then( data => this.setState({
-                peliculasPopulares: data.results,
+                peliculasTopRated: data.results,
             }))
             .catch()
         
@@ -45,7 +45,7 @@ class Movies extends Component{
                 </section>
                 <section className='cardContainer'>
                     { 
-                        this.state.peliculasTopRated.map( (unaPelicula, idx) => <MovieCardTopRated key={unaPelicula.name+idx} datosPeliculasTop={unaPelicula}/>)
+                        this.state.peliculasTopRated.map( (unaPeli, idx) => <MovieCardTopRated key={unaPeli.name+idx} datosPeliculasTop={unaPeli}/>)
                     }
                 </section>
             </React.Fragment>
