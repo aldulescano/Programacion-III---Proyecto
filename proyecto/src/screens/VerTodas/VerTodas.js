@@ -9,10 +9,7 @@ class VerTodas extends Component{
         super(props);
         this.state={
             peliculasPopulares:[],
-            nextPage:'' 
-            
-            
-
+            nextPage:''  
         }
     }
 
