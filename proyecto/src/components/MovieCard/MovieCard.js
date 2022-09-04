@@ -7,8 +7,24 @@ class MovieCard extends Component{
     constructor(props){
         super(props)
         this.state = {
+            descriptionClass: 'ocultar',
+            textoMostrarDescripcion: 'Ver descripcion',
+            favsLegend: 'Agregar a Favoritos'
         };
     };
+
+    mostrarDescripcion(){
+        if(this.state.descriptionClass === 'ocultar'){
+            this.setState({
+                descriptionClass: 'mostrar', textoMostrarDescripcion: 'Ocultar descripcion'
+            })
+        } else {
+            this.setState({
+                descriptionClass: 'ocultar', textoMostrarDescripcion: 'Ver descripcion'
+            })
+        }
+    }
+
 
     adminFavoritos(id){
 
@@ -21,7 +37,21 @@ class MovieCard extends Component{
 
         }
 
-        favoritos.push(id);
+        if(favoritos.includes(id)){
+
+        favoritos = favoritos.filter(elId =>elId !== id);
+        this.setState ({
+            favsLegend: 'Agregar a Favoritos'
+        })
+        }
+
+        else {
+            favoritos.push(id);
+            this.setState ({
+                favsLegend: 'Quitar de Favoritos'
+            })
+        }
+        
 
         let favoritosAString =  JSON.stringify(favoritos);
 
@@ -39,20 +69,19 @@ class MovieCard extends Component{
                     </Link>
                     </figure>
                     <h2 className='titulox'>{this.props.datosPeliculasPop.title}</h2> 
-                <div className='efectoOculto'>
-                <div>
-                <p className='overviewCard'>{this.props.datosPeliculasPop.overview}</p>                   
+                <div className='descripcionCard'>
+                <p onClick={() => this.mostrarDescripcion()} className='OverViewCard'> {this.state.textoMostrarDescripcion} </p>
+                <p className={this.state.descriptionClass}>{this.props.datosPeliculasPop.overview}</p>  
                 <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
                 </Link>
-                </div>-*
+                </div>
                 <div className='buttonsCard'>
-                        <button>Ver más</button>
                <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
                <button>Ir a detalle</button>
                 </Link>
-                <button onClick={()=> this.adminFavoritos(this.props.datosPeliculasPop.id)}>Agregar a Favoritos</button> 
+                <button onClick={()=> this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button>         
                 </div>
-                </div>
+                
                 </article>
     )
             

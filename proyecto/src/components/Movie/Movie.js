@@ -33,10 +33,12 @@ class Movies extends Component{
             }))
             .catch()
         }
+
+
     render(){
         return(
             <React.Fragment>
-                <h1>Peliculas Populares</h1>
+                <h1 className='encabezado'>Peliculas Populares</h1>
                 <section className='cardContainer'>
                     { 
                     this.state.peliculasPopulares.length === 0 ?
@@ -45,10 +47,9 @@ class Movies extends Component{
                         this.state.peliculasPopulares.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
                     }
                 </section>
-                <h1>Peliculas Top Rated</h1>
+                <h1 className='encabezado'>Peliculas Top Rated</h1>
                 <section className='cardContainer'>
                     { 
-                   
                         this.state.peliculasTopRated.map( (unaPeli, idx) => <MovieCardTopRated key={unaPeli.name+idx} datosPeliculasTop={unaPeli}/>)
                     }
                 </section>
