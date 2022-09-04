@@ -7,8 +7,43 @@ class MovieCard extends Component{
     constructor(props){
         super(props)
         this.state = {
+            favsLegend: 'Agregar a Favoritos'
         };
     };
+
+    adminFavoritos(id){
+
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+
+        if(recuperoStorage !== null){
+            let favoritosGuardados = JSON.parse(recuperoStorage);
+            favoritos = favoritosGuardados
+
+        }
+
+        if(favoritos.includes(id)){
+
+           favoritos = favoritos.filter(elId =>elId !== id);
+           this.setState ({
+            favsLegend: 'Agregar a Favoritos'
+        })
+        }
+
+        else {
+            favoritos.push(id);
+            this.setState ({
+                favsLegend: 'Quitar de Favoritos'
+            })
+        }
+        
+
+        let favoritosAString =  JSON.stringify(favoritos);
+
+        localStorage.setItem('favoritos', favoritosAString);
+
+        console.log(localStorage)
+    }
 
     render(){
         return(
@@ -30,7 +65,7 @@ class MovieCard extends Component{
                <Link to={`/peliculas/detalle/id/${this.props.datosPeliculasPop.id}`}>
                <button>Ir a detalle</button>
                 </Link>
-                <button>Agregar a Favoritos</button> 
+                <button onClick={()=> this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button> 
                 </div>
                 </div>
                 </article>
