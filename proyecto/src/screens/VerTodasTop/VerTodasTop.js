@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Form from '../../components/Form/Form';
 import MovieCard from '../../components/MovieCard/MovieCard';
-import './verTodas.css';
+import './VerTodasTop.css';
 
 
 
@@ -17,7 +17,7 @@ class VerTodas extends Component{
     }
 
     componentDidMount(){
-        let popularMovies = `https://api.themoviedb.org/3/movie/popular?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US&page=1`
+        let popularMovies = `https://api.themoviedb.org/3/movie/top_rated?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US&page=1`
      console.log(this.state.tipoUrl)
     fetch(popularMovies)
             .then( res => res.json())
@@ -31,7 +31,7 @@ class VerTodas extends Component{
             .catch()
         }
     cargarMas(){
-            let url = `https://api.themoviedb.org/3/movie/popular?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US&page=${this.state.nextPage + 1}`;
+            let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US&page=${this.state.nextPage + 1}`;
             fetch(url)
                 .then(res => res.json())
                 .then(data => this.setState(
