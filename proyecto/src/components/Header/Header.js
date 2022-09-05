@@ -17,7 +17,8 @@ function Header(){
                 <Link to="/peliculas"> <div  className={path === '/peliculas' ? 'show' : 'normal'}>Ver Todas</div></Link>
                 <Link to="/peliculas/favoritos"><div  className={path === '/peliculas/favoritos' ? 'show' : 'normal'}>Favoritos</div></Link> */}
                 <Link to="/" id='homeNav'>Home</Link>
-                <Link to="/peliculas">Ver Todas</Link>
+                <Link to="/peliculas">Películas Populares</Link>
+                <Link to="/peliculas">Películas Top Rated</Link>
                 <Link to="/peliculas/favoritos">Favoritos</Link>
             </ul>
         </nav>
