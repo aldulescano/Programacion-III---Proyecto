@@ -10,11 +10,11 @@
     display: none;
 }
 
-
 .movie-box {
     background-color: #ffffff;
     border-radius: 5px;
     width: 20%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     margin: 20px 20px;
@@ -53,25 +53,8 @@
     overflow: hidden;
 }
 
-
 .movie-box:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-div.buttonsCard{
-    text-align: center;
-    flex: wrap;
-    margin: 10px 10px 10px 10px;
-    padding: 15px 15px;
-}
-
-
-div.buttonsCard button{
-    background-color: #7a4a84;
-    border: 0px;
-    border-radius: 5px;
-    margin: 10px;
-    width: 50%;
-    text-align: center;
 }
 
 .toDetail{
@@ -79,23 +62,12 @@ div.buttonsCard button{
     text-align: center;
 }
 
-.figuraImagen img{
-    width: 100%;
-    height: 250px;
-    width: 100%;
-    border: solid rgb(184, 184, 184) 3px;
-    border-radius: 10px;
-    margin: 0px 0px;
-}
-
-
 .overviewCard{
     font-size:15px;
     text-align: center;
     margin:8px 8px;
     display: block;
 }
-
 
 .descripcionCard{
     text-align: center;

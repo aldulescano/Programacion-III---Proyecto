@@ -11,7 +11,7 @@ class Home extends Component{
         return(
             //faltaria el formulario de busqueda interno, que va por encima de la section de movie//
             <React.Fragment>
-                <h1  className="titularHome">¡¡Conocé las películas en cartelera!!</h1>
+                <h1  className="titularHome">Películas en cartelera</h1>
                     <Movie/>
             </React.Fragment>
         )

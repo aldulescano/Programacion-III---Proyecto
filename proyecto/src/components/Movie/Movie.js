@@ -17,28 +17,6 @@ class Movies extends Component {
         }
     }
 
-<<<<<<< HEAD
-    componentDidMount() {
-        //Buscamos los datos de las peliculas mas populares
-        fetch(urlpopularMovies)
-            .then(res => res.json())
-            .then(data => this.setState({
-                peliculasPopulares: data.results
-            }))
-            .catch()
-        fetch(urlTopRatedMovies)
-            .then(res => res.json())
-            .then(data => this.setState({
-                peliculasTopRated: data.results,
-            }))
-            .catch()
-
-    }
-
-
-    render() {
-        return (
-=======
     componentDidMount(){
     //Buscamos los datos de las peliculas mas populares
     fetch(urlpopularMovies)
@@ -59,9 +37,8 @@ class Movies extends Component {
 
     render(){
         return(
->>>>>>> ce8ed4a5862446bfbc6213af6e60a5ad56e5f176
             <React.Fragment>
-                <h1 className='encabezado'>Peliculas Populares</h1>
+                <h1 className='encabezado'>Películas Populares</h1>
                 <section className='cardContainer'>
                     {
                         this.state.peliculasPopulares.length === 0 ?
@@ -71,16 +48,10 @@ class Movies extends Component {
                             this.state.peliculasPopulares.map((unaPelicula, idx) => <MovieCard key={unaPelicula.name + idx} datosPeliculasPop={unaPelicula} />)
                     }
                 </section>
-                <h1 className='encabezado'>Peliculas Top Rated</h1>
+                <h1 className='encabezado'>Películas Top Rated</h1>
                 <section className='cardContainer'>
-<<<<<<< HEAD
-                    {
-
-                        this.state.peliculasTopRated.map((unaPeli, idx) => <MovieCardTopRated key={unaPeli.name + idx} datosPeliculasTop={unaPeli} />)
-=======
                     { 
                         this.state.peliculasTopRated.map( (unaPeli, idx) => <MovieCardTopRated key={unaPeli.name+idx} datosPeliculasTop={unaPeli}/>)
->>>>>>> ce8ed4a5862446bfbc6213af6e60a5ad56e5f176
                     }
                 </section>
             </React.Fragment>
