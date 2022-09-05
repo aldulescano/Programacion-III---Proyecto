@@ -25,6 +25,22 @@ class MovieCard extends Component {
         }
     }
 
+    componentDidMount(){
+
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+
+        if(recuperoStorage !== null){
+            let favoritosGuardados = JSON.parse(recuperoStorage);
+            favoritos = favoritosGuardados
+
+        }
+        if (favoritos.includes(this.props.datosPeliculasPop.id)){
+            this.setState ({
+                favsLegend: 'Quitar de Favoritos'
+            })
+        }
+    }
 
     adminFavoritos(id) {
 
