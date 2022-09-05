@@ -11,35 +11,6 @@ class Detalle extends Component {
         }
     }
 
-    adminFavoritos(id) {
-
-        let favoritos = [];
-        let recuperoStorage = localStorage.getItem('favoritos')
-
-        if (recuperoStorage !== null) {
-            let favoritosGuardados = JSON.parse(recuperoStorage);
-            favoritos = favoritosGuardados
-        }
-
-        if (favoritos.includes(id)) {
-
-            favoritos = favoritos.filter(elId => elId !== id);
-            this.setState({
-                favsLegend: 'Agregar a Favoritos'
-            })
-        }else {
-            favoritos.push(id);
-            this.setState({
-                favsLegend: 'Quitar de Favoritos'
-            })
-        }
-
-        let favoritosAString = JSON.stringify(favoritos);
-        localStorage.setItem('favoritos', favoritosAString);
-        console.log(localStorage)
-    }
-
-
     componentDidMount() {
 
         fetch(`https://api.themoviedb.org/3/movie/${this.state.id}?api_key=4bcb2ca1395628db6221ba6939b8c9d7`)
@@ -69,7 +40,6 @@ class Detalle extends Component {
                         <h3>Duracion: {this.state.pelicula.runtime} minutos</h3>
                         <p>{this.state.pelicula.overview}</p>
                         {/* <p>{this.state.pelicula.genres.name}</p> */}
-                        <button onClick={() => this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button>
                     </div>
                 </div>
             </React.Fragment>
