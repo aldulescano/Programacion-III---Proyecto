@@ -9,7 +9,7 @@ function Error(){
                 <h2>Error</h2>
                 <img src='/img/error.png' alt='404'/>
             </div>
-            <div>
+            <div className='texto'>
                 <p>¡Perdón! Esa página esta viendo una película</p>
             </div>
         </section>
