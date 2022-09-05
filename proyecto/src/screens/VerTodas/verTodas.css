@@ -1,0 +1,14 @@
+form{
+    margin-left: 400px;
+}
+
+.cargar{
+    margin-left: 50px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cargar:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

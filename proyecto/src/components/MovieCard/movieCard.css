@@ -72,3 +72,11 @@
 .descripcionCard{
     text-align: center;
 }
+
+.buttonsCard button:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.OverViewCard:hover {
+   text-decoration: underline;
+}

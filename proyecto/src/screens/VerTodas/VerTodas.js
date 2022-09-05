@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Form from '../../components/Form/Form';
 import MovieCard from '../../components/MovieCard/MovieCard';
+import './verTodas.css';
 
 let popularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US&page=1"
 
@@ -49,7 +50,6 @@ class VerTodas extends Component{
         return(
             <React.Fragment>
                <Form filtrarPelis={(Filtro)=>this.filtrarPelis(Filtro)}/>
-               <button type="button" onClick={ ()=>this.cargarMas()}>Cargar más</button>
                <section className='cardContainer'>
                     { 
                     this.state.peliculasPopulares.length === 0 ?
@@ -57,10 +57,10 @@ class VerTodas extends Component{
                         this.state.peliculasPopulares.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
                     }
                 </section>
+                <button className='cargar' type="button" onClick={ ()=>this.cargarMas()}>Cargar más películas</button>
             </React.Fragment>
         )
     }
-
 }
 
 
