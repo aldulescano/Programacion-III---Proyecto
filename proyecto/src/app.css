@@ -4,5 +4,5 @@
 
 body{
     background-image: url("/public/img/background.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
