@@ -49,14 +49,14 @@ class Movies extends Component {
                         :
                         this.state.peliculasPopulares.map((unaPelicula, idx) => <MovieCard key={unaPelicula.name + idx} datosPeliculasPop={unaPelicula} />)
                     }
-                    <Link to="/peliculas/populares">Ver todas las películas populares</Link>
+                    <Link to="/peliculas/populares" className='ver-todas'>Ver todas las películas populares</Link>
                 </section>
                 <h1 className='encabezado'>Películas Top Rated</h1>
                 <section className='cardContainer'>
                     {
                         this.state.peliculasTopRated.map((unaPeli, idx) => <MovieCardTopRated key={unaPeli.name + idx} datosPeliculasTop={unaPeli} />)
                     }
-                    <Link to="/peliculas/top_rated">Ver todas las películas top rated</Link>
+                    <Link to="/peliculas/top_rated" className='ver-todas'>Ver todas las películas top rated</Link>
                 </section>
             </React.Fragment>
         )

@@ -24,3 +24,18 @@ form{
 .arriba-todas button:hover{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+
+@media (max-width: 720px) {
+    form{
+        margin: 15px 0px 0px 60px;
+    }
+    .arriba-todas button{
+        margin-left: 0px;
+        font-size: 10px;
+        width: 1000px;
+        padding: 5px;
+    } 
+
+    /* ver boton */
+}

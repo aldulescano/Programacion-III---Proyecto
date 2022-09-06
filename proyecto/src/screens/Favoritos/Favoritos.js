@@ -27,7 +27,7 @@ class Favoritos extends Component{
                             pelis : pelis
                         })
                     })
-                    .catch(e => console.log(e))
+                    .catch(error => console.log(error))
             })
 
 
@@ -39,7 +39,7 @@ class Favoritos extends Component{
     render(){
         return(
             <React.Fragment>
-                <h2>Favoritos</h2>
+                <h2>Tus películas favoritas</h2>
                  <section className='cardContainer'>
                     { 
                         this.state.pelis.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)

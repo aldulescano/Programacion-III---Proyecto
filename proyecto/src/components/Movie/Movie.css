@@ -18,3 +18,26 @@
     font-size: 20px;
     padding: 10px;
 }
+
+@media (max-width: 768px) {
+    .cardContainer{
+        width: 1000px;
+        justify-content: flex-end;
+        margin-left: 0px;
+        /* necesito que haya 2 por fila */
+    }
+}
+
+@media (max-width: 420px) {
+    .cardContainer{
+        width: 1300px;
+        flex-direction: column;
+    }
+    .encabezado{
+        font-size: 14px;
+    }
+
+    .ver-todas{
+        margin-left: 35px;
+    }
+}

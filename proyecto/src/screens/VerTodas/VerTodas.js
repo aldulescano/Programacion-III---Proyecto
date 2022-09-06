@@ -56,7 +56,6 @@ class VerTodas extends Component{
             <React.Fragment>
                 <div className='arriba-todas'>
                     <Form filtrarPelis={(Filtro)=>this.filtrarPelis(Filtro)}/>
-                    <button className='cargar' type="button" onClick={ ()=>this.cargarMas()}>Cargar más películas</button>
                 </div>
                <section className='cardContainer'>
                     { 
@@ -65,6 +64,7 @@ class VerTodas extends Component{
                         this.state.peliculasPopulares2.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
                     }
                 </section>
+                <button className='cargar' type="button" onClick={ ()=>this.cargarMas()}>Cargar más películas</button>
             </React.Fragment>
         )
     }
