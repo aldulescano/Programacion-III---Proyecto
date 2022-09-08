@@ -1,21 +1,53 @@
 import React, {Component} from 'react';
+import MovieCard from '../../components/MovieCard/MovieCard';
+import './favoritos.css';
 
 class Favoritos extends Component{
     constructor(){
-        super()
-        this.state={
+        super();
+        this.state = {
+            pelis:[] 
         }
     }
 
+    componentDidMount(){
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos')
+
+        if(recuperoStorage !== null){
+            favoritos = JSON.parse(recuperoStorage)
+            let pelis = [];
+
+            favoritos.forEach(unId => {
+                fetch(`https://api.themoviedb.org/3/movie/${unId}?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US`)
+                    .then(res => res.json())
+                    .then(data => {
+                        pelis.push(data)
+                        this.setState({
+                            pelis : pelis
+                        })
+                    })
+                    .catch(error => console.log(error))
+            })
+
+
+            console.log(pelis);
+        }
+        
+    }
+    
     render(){
         return(
             <React.Fragment>
-                <h1>Mis películas favoritas</h1>
+                <h2>Tus películas favoritas</h2>
+                 <section className='cardContainer'>
+                    { 
+                        this.state.pelis.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
+                    }
+                </section>
             </React.Fragment>
         )
     }
-
 }
-
 
 export default Favoritos;

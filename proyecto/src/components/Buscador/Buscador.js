@@ -5,7 +5,7 @@ class Buscador extends Component{
     constructor(props){
         super (props);
         this.state={
-            input: '',
+            input: "",
         }
     }
     preventRecarga(evento){ 
@@ -25,7 +25,6 @@ class Buscador extends Component{
                 </form> 
             </React.Fragment>
         )
-
     }
 }
 

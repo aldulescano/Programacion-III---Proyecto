@@ -12,10 +12,32 @@
 
 .encabezado{
     text-align: center;
-    font-weight: 300px;
-    color: black solid 5px;
-    border: black solid 2px;
-    border-radius: 20px;
-    margin: 20px 20px;
-    background-color: rgb(191, 122, 255);
+    color: white;
+    margin: 40px 20px 20px;
+    background-color: #7a4a84;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .cardContainer{
+        width: 1000px;
+        justify-content: flex-end;
+        margin-left: 0px;
+        /* necesito que haya 2 por fila */
+    }
+}
+
+@media (max-width: 420px) {
+    .cardContainer{
+        width: 1300px;
+        flex-direction: column;
+    }
+    .encabezado{
+        font-size: 14px;
+    }
+
+    .ver-todas{
+        margin-left: 35px;
+    }
 }

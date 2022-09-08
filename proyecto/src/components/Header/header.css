@@ -38,7 +38,7 @@ nav ul {
     text-decoration: none;
 }
 
-img {
+.main-nav img {
     height: 100px;
 }
 
@@ -59,4 +59,35 @@ img {
     /* style */
     color: black;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .main-nav{
+        justify-content: center;
+    }
+    .main-nav a{
+        margin: 0px;
+    }
+    .main-nav img {
+        margin-left: 200px;
+        margin-right: 200px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 420px) {
+    .main-nav{
+        justify-content: space-evenly;
+        margin: 0px;
+        padding: 0px;
+    }
+    .main-nav a{
+        margin: 0px;
+        padding: 2px;
+    }
+    .main-nav img {
+        margin-left: 100px;
+        margin-right: 100px;
+        height: 80px;
+    }
 }

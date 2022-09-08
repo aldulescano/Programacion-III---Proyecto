@@ -1,0 +1,38 @@
+.pelicula-completa{
+    margin-left: 30px;
+    display: flex;
+}
+
+.pelicula-izquierda{
+    margin-right: 20px;
+}
+
+.pelicula-izquierda img{
+    height: 380px;
+}
+
+.pelicula-derecha{
+    margin-right: 300px;
+}
+
+button {
+    background-color: #7a4a84;
+    border-color: #7a4a84;
+    color: aliceblue;
+}
+
+h1{
+    margin-left: 50px;
+}
+
+h3{
+    font-size: 15px;
+}
+
+p{
+    font-size: 15px;
+}
+
+li{
+    font-size: 14px;
+}

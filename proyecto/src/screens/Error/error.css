@@ -8,7 +8,7 @@
     margin-left: 60px;
 }
 
-.paqueteError p{
+.texto p{
     margin-left: 60px;
 }
 
@@ -17,4 +17,15 @@ img{
     margin-left: 20px;
     align-self: center;
 
+}
+
+@media (max-width: 420px) {
+    .paqueteError h2{
+        margin-left: 20px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .texto p{
+        margin-left: 20px;
+    }
 }

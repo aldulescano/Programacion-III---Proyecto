@@ -1,0 +1,36 @@
+h2{
+    margin-left: 90px;
+    font-size: 40px;
+}
+
+@media (max-width: 720px) {
+    h2{
+        font-size: 25px;
+        margin-top: 40px;
+    }
+
+    .cardContainer{
+        width: 1100px;
+        margin-left: 0px;
+        padding: 0px;
+        justify-content: flex-start;
+    }
+
+    /* lo mismo de las cards: tiene que haber 2 */
+}
+
+@media (max-width: 420px) {
+    h2{
+        font-size: 20px;
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+
+    .cardContainer{
+        width: 1100px;
+        margin-left: 20px;
+        padding: 0px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}

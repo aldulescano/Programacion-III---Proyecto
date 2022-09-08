@@ -1,0 +1,36 @@
+.cargar{
+    margin-left: 50px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cargar:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.arriba-todas{
+    display: flex;
+}
+
+.arriba-todas button{
+    margin-left: 300px;
+}
+
+.arriba-todas button:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 720px) {
+    form{
+        margin: 10px 0px 0px 60px;
+    }
+    .arriba-todas button{
+        margin-left: 200px;
+        font-size: 10px;
+        width: 100px;
+        padding: 5px;
+    } 
+
+    /* ver boton */
+}
