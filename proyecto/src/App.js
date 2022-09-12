@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/peliculas/top_rated" component={VerTodasTop} />
           <Route path="/peliculas/favoritos" component={Favoritos} />
           <Route path="/peliculas/detalle/id/:id" component={Detalle} />
-          <Route path="/resultados/id/:id" component={Search} />
+          <Route path= "/resultados/id/:id" component={Search} />
           <Route path="" component={Error404} />
         </Switch>
       </main>

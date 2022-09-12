@@ -12,7 +12,9 @@ class Buscador extends Component{
         e.preventDefault();
     };
     saveChanges(e){ 
-        this.setState({input: e.target.value}); 
+        this.setState({
+            input: e.target.value
+        }); 
     };
     render () {
         return (
