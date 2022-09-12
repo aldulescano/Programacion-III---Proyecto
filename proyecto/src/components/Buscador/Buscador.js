@@ -21,8 +21,14 @@ class Buscador extends Component{
             <React.Fragment>
                 <form onSubmit={(e) => this.prevRecarga(e)}>
                     <input type='text' placeholder='pelicula' onChange={(e) => this.saveChanges(e)} value={this.state.input} />
-                    <Link to={`/resultados/id/${this.state.input}`}>
-                        <input type='submit' value='submit' /> </Link>    
+                    {
+                        this.state.input ?
+                            <Link to={`/resultados/${this.state.input}`}>
+                                <input type='submit' value='submit' /> 
+                            </Link> 
+                            :
+                            <input type='submit' value='submit' /> 
+                    }
                 </form> 
             </React.Fragment>
         )
@@ -31,3 +37,5 @@ class Buscador extends Component{
 }
 
 export default Buscador;
+
+
