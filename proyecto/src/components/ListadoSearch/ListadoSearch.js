@@ -2,11 +2,12 @@ import React, {Component} from "react";
 import './ListadoSearch.css'
 import { Link } from 'react-router-dom';
 
+
 class ListadoSearch extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            peliculasEncontradas: '',
+            peliculasEncontradas: "",
             descriptionClass: 'ocultar',
             textoMostrarDescripcion: 'Ver descripcion',
         };
@@ -24,15 +25,6 @@ class ListadoSearch extends Component {
         }
     }
 
-    componentDidMount() {
-        //Buscamos los datos de las peliculas mas populares
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=66374e925f9ce0061d8e10191732f374&query=${props.match.params.id}`)
-            .then(res => res.json())
-            .then(data => this.setState({
-                peliculasEncontradas: data.results,
-            }))
-            .catch()
-        }
 
     render() {
         return (
