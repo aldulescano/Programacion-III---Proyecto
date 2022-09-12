@@ -88,10 +88,10 @@ class Detalle extends Component {
                                     <h3>Rating: {Number(this.state.pelicula.popularity).toFixed(0)}</h3>
                                     <h3>Fecha de estreno: {this.state.pelicula.release_date}</h3>
                                     <h3>Duracion: {this.state.pelicula.runtime} minutos</h3>
-                                    <p>{this.state.pelicula.overview}</p>
                                     <ul>
                                         {this.state.generos.map((Genero, idx) => <li key={Genero.name + idx}>{Genero.name}</li>)}
                                     </ul>
+                                    <p>{this.state.pelicula.overview}</p>
                                     <button onClick={() => this.funcionalidadFavoritos(this.state.id)}>{this.state.fav}</button>
                                 </div>
                             </div>

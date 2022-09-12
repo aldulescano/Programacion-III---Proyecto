@@ -22,15 +22,20 @@
 }
 
 @media (max-width: 720px) {
+
+    .cardContainer{
+        max-width: 720px;
+    }
+
     form{
         margin: 10px 0px 0px 60px;
     }
+    
     .arriba-todas button{
-        margin-left: 200px;
+        margin-left: 20px;
         font-size: 10px;
         width: 100px;
         padding: 5px;
     } 
 
-    /* ver boton */
 }

@@ -16,16 +16,40 @@ img{
     height: 150px;
     margin-left: 20px;
     align-self: center;
+}
 
+@media (max-width: 720px) {
+    .texto p{
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 420px) {
-    .paqueteError h2{
-        margin-left: 20px;
-        margin-top: 50px;
-        font-size: 40px;
+
+    .paqueteError{
+        display:block;
     }
+
+    .paqueteError{
+        flex-direction: column;
+    }
+
+    .paqueteError h2{
+        margin-top: 50px;
+        font-size: 30px;
+        margin-bottom: 0px;
+        margin-left: 140px;
+    }
+
     .texto p{
-        margin-left: 20px;
+        margin-left: 40px;
+        font-size: 16px;
+    }
+
+    img{
+        height: 200px;
+        margin-left: 80px;
+        align-self: center;
+        margin-top: 0px;
     }
 }

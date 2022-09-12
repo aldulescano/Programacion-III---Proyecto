@@ -1,7 +1,6 @@
 .cardContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .movieCard{
@@ -21,17 +20,23 @@
 
 @media (max-width: 768px) {
     .cardContainer{
-        width: 1000px;
-        justify-content: flex-end;
+        max-width: 620px;
         margin-left: 0px;
-        /* necesito que haya 2 por fila */
+    }
+
+    .movie-box{
+        width: 35%;
     }
 }
 
 @media (max-width: 420px) {
     .cardContainer{
-        width: 1300px;
+        max-width: 420px;
         flex-direction: column;
+        margin-left: 15px;
+    }
+    .movie-box{
+        width:75%;
     }
     .encabezado{
         font-size: 14px;

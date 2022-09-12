@@ -100,10 +100,7 @@ class MovieCard extends Component {
 
             </article>
         )
-
-
     }
-
 }
 
 export default MovieCard;

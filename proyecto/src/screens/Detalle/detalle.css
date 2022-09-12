@@ -36,3 +36,21 @@ p{
 li{
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+    
+    .pelicula-derecha{
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .pelicula-completa{
+        flex-direction: column;
+    }
+
+    .pelicula-izquierda img{
+        height: 300px;
+        margin-left: 0px;
+    }
+}
