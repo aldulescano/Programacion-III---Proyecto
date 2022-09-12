@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Buscador from '../Buscador/Buscador';
 import './header.css';
 
 
@@ -19,7 +18,6 @@ function Header(){
                 <Link to="/peliculas/top_rated">Películas Top Rated</Link>
                 <Link to="/peliculas/favoritos">Favoritos</Link>
             </ul>
-            <Buscador/>
         </nav>
     )
 }

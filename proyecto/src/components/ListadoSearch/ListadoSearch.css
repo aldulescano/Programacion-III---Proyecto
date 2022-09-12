@@ -1,0 +1,43 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movieCard{
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+.encabezado{
+    text-align: center;
+    color: white;
+    margin: 40px 20px 20px;
+    background-color: #7a4a84;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .cardContainer{
+        width: 1000px;
+        justify-content: flex-end;
+        margin-left: 0px;
+        /* necesito que haya 2 por fila */
+    }
+}
+
+@media (max-width: 420px) {
+    .cardContainer{
+        width: 1300px;
+        flex-direction: column;
+    }
+    .encabezado{
+        font-size: 14px;
+    }
+
+    .ver-todas{
+        margin-left: 35px;
+    }
+}

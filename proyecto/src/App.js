@@ -5,7 +5,7 @@ import VerTodas from './screens/VerTodas/VerTodas';
 import VerTodasTop from './screens/VerTodasTop/VerTodasTop';
 import Favoritos from './screens/Favoritos/Favoritos';
 import Detalle from './screens/Detalle/Detalle';
-import Resultados from './screens/Resultados/Resultados';
+import Search from './screens/SearchResults/SearchResults';
 import Error404 from './screens/Error/Error404';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/peliculas/top_rated" component={VerTodasTop} />
           <Route path="/peliculas/favoritos" component={Favoritos} />
           <Route path="/peliculas/detalle/id/:id" component={Detalle} />
-          <Route path="/resultados" component={Resultados} />
+          <Route path="/resultados/id/:id" component={Search} />
           <Route path="" component={Error404} />
         </Switch>
       </main>
