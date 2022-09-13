@@ -69,13 +69,13 @@ class Detalle extends Component {
     render() {
         return (
             <React.Fragment>
-                    {/* {
-                        this.state.pelicula.length === 0 ? 
+                    { 
+                        this.state.pelicula.title === 0 ? 
                         <div className="gif">
                             <img src="/img/cargando-loading.gif" className="tenor-gif-embed" alt="chica cargando"/>
                             <p>Cargando... O quizas no tenemos lo que buscas</p>
                         </div> 
-                        : */}
+                        : 
                         <div>
                             <h1>{this.state.pelicula.title}</h1>
                             <div className='pelicula-completa'>
@@ -96,7 +96,7 @@ class Detalle extends Component {
                                 </div>
                             </div>
                         </div>
-                    {/* } */}
+                    }
             </React.Fragment>
         )
     }
