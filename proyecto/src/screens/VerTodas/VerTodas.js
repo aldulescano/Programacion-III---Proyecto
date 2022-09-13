@@ -59,7 +59,7 @@ class VerTodas extends Component{
                 </div>
                <section className='cardContainer'>
                     { 
-                    this.state.peliculasPopulares.length === 0 ?
+                    this.state.peliculasPopulares2.length === 0 ?
                     <div className="gif"><img src="/img/cargando-loading.gif" className="tenor-gif-embed" alt="chica cargando"/><p>Cargando...</p><p>O quizas no tenemos lo que buscas :(</p></div> :
                         this.state.peliculasPopulares2.map( (unaPelicula, idx) => <MovieCard key={unaPelicula.name+idx} datosPeliculasPop={unaPelicula}/>)
                     }
